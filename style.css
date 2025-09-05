@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playwrite+DE+Grund:wght@100..400&family=Quicksand:wght@300..700&display=swap');
+
+/* FONTS:  Playwrite DE Grund   ||   Noto Sans    ||    Quicksand   ||  Montserrat   */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 16px;
+    /* Variables */
+    --bg-co: #f5fbff;
+    --text-co: #252525;
+    --btn-bg-co: #ffffff;
+    --btn-text-co: #000000;
+    --btn-bg-co-hover: #0077ff;
+    --btn-text-co-hover: #fcfcfc;
+    --btn-bg-co-active: #0057bb;
+    --btn-text-co-active: #ffffff;
+    --border-co: #d6d6d6;
+}
+
+body {
+    font-family: 'noto sans', sans-serif;
+    background-color: var(--bg-co);
+    color: var(--text-co);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    border-radius: 5px;
+    border: 2px solid black;
+    width: 240px;
+    height: fit-content;
+}
+
+#small-result {
+    overflow-x: auto;
+    text-align: end;
+    width: 90%;
+    height: fit-content;
+    padding: 0 7px;
+    margin: 5% 5% 0 0;
+    font-size: 0.7rem;
+}
+#result {
+    overflow-x: auto;
+    text-align: end;
+    width: 90%;
+    height: fit-content;
+    margin: 0 5% 5% 5%;
+    padding: 0 10px;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+}
+#result::-webkit-scrollbar {
+    height: 7px;
+    background-color: rgb(187, 187, 187);
+    border: 1px solid rgb(51, 51, 51);
+}
+#result::-webkit-scrollbar-thumb {
+    height: 3px;
+    margin: 1px;
+    background-color: black;
+}
+.result-box {
+    height: 80px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.btn-box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.btn-box > button {
+    height:50px;
+    border-radius: 0;
+    border: 1px solid var(--border-co);
+    background-color: var(--btn-bg-co);
+    color: var(--btn-text-co);
+    transition: 0.05s all ease-in-out;
+}
+
+.btn-box > button:hover {
+    background-color: var(--btn-bg-co-hover);
+    color: var(--btn-text-co-hover);
+}
+.btn-box > button:active {
+    background-color: var(--btn-bg-co-active);
+    color: var(--btn-text-co-active);
+}
+
+.orange {
+    background-color: rgb(255, 177, 31) !important;
+}
+.orange:hover {
+    background-color: rgb(202, 138, 20) !important;
+}
